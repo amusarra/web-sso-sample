@@ -1,0 +1,31 @@
+<div class="media">
+  <div class="media-left media-top">
+    <a href="#">
+      <img class="media-object img-responsive img-thumbnail" style="height: 60%;" src="images/SSOFlow_1.png" alt="Identity Provider initiated Single Sign-On">
+    </a>
+  </div>
+  <div class="media-body bs-component">
+    <h4 class="media-heading"><strong>Single Sign-On Overview</strong></h4>
+    <p class="text-justify">
+      Single-sign-on is a key feature of the <strong>WSO2 Identity Server</strong> that enables users to access multiple applications using the
+      same set of credentials. Additionally, the user can access all these applications without having to log into each and every one of them i
+      ndividually. For instance, if users log into application A, they would automatically have access to application B as well for the duration
+      of that session without having to re-enter their credentials.The profiles specification for <strong>Security Assertion Markup Language
+      2.0 (SAML 2.0)</strong> defines single sign-on based on a web browser.
+    </p>
+    <p class="text-justify">
+      This <strong>SSO SAMLv2 Web Application</strong> is a fork of <a href="https://github.com/wso2/product-is/tree/master/modules/samples/sso/sso-agent-sample">Travelocity.COM ServiceProvider / RelyingParty Webapp</a>.
+      This application acts as a Service Provider (<abbr title="Service Provider">SP</abbr>) and Liferay acts as a
+      Identity Provider (<abbr title="Identity Provider">IdP</abbr>).
+      The application uses the <strong><a href="https://github.com/wso2/carbon-identity">WSO2 Carbon Identity framework</a></strong>
+      which simplifies the configuration as SP.<br/>
+    </p>
+    <p class="text-justify">
+      The application is configured as SP through the configuration of the Liferay SAML Portlet.
+
+      <ul>
+        <li>IdP entity Id identity.labs.dontesta.it</li>
+        <li>SP entity Id portal.labs.dontesta.it</li>
+    </p>
+  </div>
+</div>

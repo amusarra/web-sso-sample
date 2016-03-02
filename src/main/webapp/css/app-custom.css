@@ -43,3 +43,7 @@ footer {
 i.fa.social-footer {
     color: darkorange;
 }
+
+.nav>li>a>img {
+    max-width: 18px;
+}

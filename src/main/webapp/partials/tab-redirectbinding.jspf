@@ -1,0 +1,1 @@
+<p class="lead">Click <a href="samlsso?SAML2.HTTPBinding=HTTP-Redirect">here</a> to login with SAMLv2 (Redirect binding) from Liferay Identity Provider</p>

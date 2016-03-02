@@ -1,0 +1,3 @@
+<%=exception.getMessage()%>
+<hr>
+<a href="index.jsp"> Go to Login page </a>

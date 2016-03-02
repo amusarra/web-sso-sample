@@ -1,0 +1,31 @@
+<div class="well bs-component">
+   <form class="form-horizontal" role="form" data-toggle="validator" method="post" action="samlsso?SAML2.HTTPBinding=HTTP-POST">
+      <fieldset>
+         <legend>Login with SAMLv2 (Post Binding) from Liferay Identity Provider with user credentials</legend>
+         <div class="form-group has-feedback">
+            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+            <div class="col-lg-10">
+               <input type="email" class="form-control" id="username" placeholder="Email" autocomplete="off" aria-describedby="inputSuccessEmailStatus" required>
+               <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+               <span id="inputSuccessEmailStatus" class="sr-only">(success)</span>
+               <div class="help-block with-errors"></div>
+            </div>
+         </div>
+         <div class="form-group has-feedback">
+            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+            <div class="col-lg-10">
+               <input type="password"  class="form-control" id="password" data-minlength="4" placeholder="Password" autocomplete="off" aria-describedby="inputSuccessPasswordStatus" required>
+               <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+               <span id="inputSuccessPasswordStatus" class="sr-only">(success)</span>
+               <div class="help-block with-errors"></div>
+            </div>
+         </div>
+         <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+               <button type="reset" class="btn btn-default">Cancel</button>
+               <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+         </div>
+      </fieldset>
+   </form>
+</div>

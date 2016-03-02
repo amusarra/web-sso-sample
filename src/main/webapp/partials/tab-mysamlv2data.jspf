@@ -1,0 +1,22 @@
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>SAML Attribute</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%
+        if(saml2SSOAttributes != null){
+            for (Map.Entry<String, String> entry:saml2SSOAttributes.entrySet()) {
+    %>
+                <tr>
+                    <td><%=entry.getKey()%></td>
+                    <td><%=entry.getValue()%></td>
+                </tr>
+    <%
+            }
+        }
+    %>
+  </tbody>
+</table>
