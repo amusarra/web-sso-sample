@@ -1,1 +1,48 @@
-<p class="lead">Click <a href="samlsso?SAML2.HTTPBinding=HTTP-Redirect">here</a> to login with SAMLv2 (Redirect binding) from Liferay Identity Provider</p>
+<div class="bs-component">
+  <h4><strong>HTTP Redirect Binding</strong></h4>
+  <p class="text-justify">
+    Click <a href="samlsso?SAML2.HTTPBinding=HTTP-Redirect" title="To login with SAMLv2 (Redirect binding) from Liferay Identity Provider"><span class="label label-primary">here</span></a> to
+    login with SAMLv2 (Redirect binding) from Liferay Identity Provider</p>
+  <div class="bs-callout bs-callout-info">
+    <p class="text-justify">
+      SAML protocol messages are often carried directly in the URL query string of an HTTP GET request.
+      Since the length of URLs is limited in practice, the HTTP Redirect binding is suitable for short messages,
+      such as the <samlp:AuthnRequest> message. Longer messages (e.g., those containing signed SAML assertions) should
+      be transmitted via other bindings such as the HTTP POST Binding.
+
+      SAML requests or responses transmitted via HTTP Redirect have a SAMLRequest or SAMLResponse
+      query string parameter, respectively. Before it’s sent, the message is deflated (sans header and checksum),
+      base64-encoded, and URL-encoded, in that order. Upon receipt, the process is reversed to recover the original message.
+
+      For example, encoding the <code>&lt;samlp:AuthnRequest&gt;</code> message above yields:
+    </p>
+    <div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>
+    <figure class="highlight">
+      <pre>
+        <code>http://identity.labs.dontesta.it:8080/c/portal/saml/sso?SAMLRequest=nZNPj9owEMXv%2FRSR7%2BTfVhWySFYUtCrStqLA9tCb154sLo7tehyW%2Ffa1E9hyKAj1Opl5b%2Fx%2Bk8n9oVXJHhxKoytSpDlJQHMjpH6pyNPmYTQm9%2FWHCbJWWTrt%2FFav4HcH6JMpIjgfxmZGY9eCW4PbSw5Pq8eKbL23NMuscZ6pVLFnTIXRPsyxVHo6zsd5tjUtpL%2FQkmQe6lIz3%2B9wHJUCtJf%2B7cIwP2pncbMM0ZDkwTgO%2FYoVaZhCIMliXhFtIbxIy9aaRjeaw05oxiwTwjCrXnac6ZYxtQvduGSIcg9%2F5xE7WOhgrH1Fyrz4NMrvRkW%2BKUp6N6bFOM2Ljz9JsnTGG27UZ6mH5DqnqWEokWrWAlLP6Xr69ZGWaU6fhyakXzab5WgFQjrgniQ%2FThTKSCFw0Uj73K%2FL2aM3qY%2BU%2BqXd7QLsBJLUF3hNsnPlwae09FuQWsyXRkn%2BlkyVMq8zB8yH%2BLzroAfSMn%2FdPFakGDV9K7UxAvSBPEnWy6j%2FvWNKNhJcRQb382TKW6PJ3nc%2BXi%2BI%2FlBm8Y0Hn8xMa5mTGNOHA4s0%2FsNlMKHnyjMV0l1BcyZ3M4yrbZzyKB3K8WZfjRPxBsMdgdg4pjGSHLD9c596%2BHYpkPpE%2FPyPr%2F8A&SigAlg=http%3A%2F%2Fwww.w3.org%2F2000%2F09%2Fxmldsig%23rsa-sha1&Signature=NcW9VhwjYEOIc27hcgPjFRnr9kgaPjfw2Fknqm1G2eNaxWGbPpmmTJdZa2hT8yk4Tz3PgRV3M0YMo%2FBnkwpp1%2BC%2Ffjc05RMWIZeSx698gCmU4ByKD1Z0kj0CkJH8dULgoWN1Nfea2P%2BB3fQc5nyoAiCrIPb9cOICu%2BcRlxdc2dYG4AjZM3kIxOvJqmCXBoN%2FJExVyhlg3wfVSJ8VM4lU364KZVPA2UFXvB0WykPj%2BdpldNzQYolW7mYNMIAw%2FqEn%2BaSBExscIi615M%2Bj9LzvFcwpdcCLI1Qq6WdWQ7V8KJVuXCJnVvbN3g6hEngziHlPS6tNelOQ%2Fl2zhNd6RPZwWWo%3D</code>
+      </pre>
+    </figure>
+    <p class="text-justify">
+      The above message (formatted for readability) may be signed for additional security.
+      In practice the <code>&lt;samlp:AuthnRequest&gt;</code> message is unsigned, leaving the identity provider t
+      o identify the sender via SAML metadata.
+    </p>
+    <div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>
+    <figure class="highlight">
+      <pre>
+        <code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;samlp:AuthnRequest xmlns:samlp=&quot;urn:oasis:names:tc:SAML:2.0:protocol&quot; AssertionConsumerServiceURL=&quot;http://portal.labs.dontesta.it:8080/home.jsp&quot; Destination=&quot;http://identity.labs.dontesta.it:8080/c/portal/saml/sso&quot; ForceAuthn=&quot;false&quot; ID=&quot;npeencnimpofnfncekdnaapaddoaplgkcanmaalk&quot; IsPassive=&quot;false&quot; IssueInstant=&quot;2016-03-10T12:38:18.014Z&quot; ProtocolBinding=&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect&quot; Version=&quot;2.0&quot;&gt;
+  &lt;samlp:Issuer xmlns:samlp=&quot;urn:oasis:names:tc:SAML:2.0:assertion&quot;&gt;
+    portal.labs.dontesta.it
+  &lt;/samlp:Issuer&gt;
+  &lt;saml2p:NameIDPolicy xmlns:saml2p=&quot;urn:oasis:names:tc:SAML:2.0:protocol&quot; AllowCreate=&quot;true&quot; Format=&quot;urn:oasis:names:tc:SAML:2.0:nameid-format:persistent&quot; SPNameQualifier=&quot;Issuer&quot; /&gt;
+  &lt;saml2p:RequestedAuthnContext xmlns:saml2p=&quot;urn:oasis:names:tc:SAML:2.0:protocol&quot; Comparison=&quot;exact&quot;&gt;
+    &lt;saml:AuthnContextClassRef xmlns:saml=&quot;urn:oasis:names:tc:SAML:2.0:assertion&quot;&gt;
+      urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport
+    &lt;/saml:AuthnContextClassRef&gt;
+  &lt;/saml2p:RequestedAuthnContext&gt;
+&lt;/samlp:AuthnRequest&gt;</code>
+      </pre>
+    </figure>
+  </div>
+</div>

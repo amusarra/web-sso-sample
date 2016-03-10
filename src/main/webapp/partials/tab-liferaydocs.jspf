@@ -1,1 +1,36 @@
-<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
+<div class="bs-component">
+  <h4><strong>Liferay SAML Plugin</strong></h4>
+  <p class="text-justify">
+    Liferay 6.1 EE and later versions support SAML 2.0 integration via the SAML 2.0 Provider EE plugin.
+    This plugin is provided as an app from Liferay Marketplace that allows Liferay to act as a SAML 2.0
+    identity provider or as a service provider. First, we’ll look at how to set Liferay up as an Identity
+    Provider and then we’ll look at how to set it up as a Service Provider.
+  </p>
+  <p class="text-justify">
+    Following the useful resources:
+  </p>
+  <ul>
+    <li>
+      <a href="https://www.liferay.com/it/marketplace/-/mp/application/15188711"
+        title="SAML 2.0 Provider EE"
+        target="_blank">SAML 2.0 Provider EE</a>
+    </li>
+    <li>
+      <a href="https://dev.liferay.com/discover/portal/-/knowledge_base/6-1/integrating-liferay-users-into-your-enterprise#saml"
+        title="Setup Liferay SAML Portlet Plugin"
+        target="_blank">Setup Liferay SAML Portlet Plugin</a>
+    </li>
+    <li>
+      <a href="https://dev.liferay.com/discover/portal/-/knowledge_base/6-1/integrating-liferay-users-into-your-enterprise#setting-up-liferay-as-a-saml-identity-provider"
+        title="Setting up Liferay as a SAML Identity Provider"
+        target="_blank">Setting up Liferay as a SAML Identity Provider</a>
+      </a>
+    </li>
+    <li>
+        <a href="https://dev.liferay.com/discover/portal/-/knowledge_base/6-1/integrating-liferay-users-into-your-enterprise#setting-up-liferay-as-a-saml-service-provider"
+          title="Setting up Liferay as a SAML Service Provider"
+          target="_blank">Setting up Liferay as a SAML Service Provider</a>
+        </a>
+    </li>
+  </ul>
+</div>

@@ -1,3 +1,23 @@
 <script type='text/javascript' src='<%= org.webjars.AssetLocator.getWebJarPath("jquery.min.js") %>'></script>
 <script type='text/javascript' src='<%= org.webjars.AssetLocator.getWebJarPath("js/bootstrap.min.js") %>'></script>
 <script type='text/javascript' src='<%= org.webjars.AssetLocator.getWebJarPath("js/validator.js") %>'></script>
+<script type='text/javascript' src='js/docs.min.js'></script>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
+$(function() {
+          // Javascript to enable link to tab
+          var hash = document.location.hash;
+          if (hash) {
+            $('.nav-tabs a[href='+hash+']').tab('show');
+          }
+
+          // Change hash for page-reload
+          $('a[data-toggle="tab-ext"]').on('click', function (e) {
+            $('.nav-tabs a[href='+e.target.hash+']').tab('show');
+            window.location.hash = e.target.hash;
+          });
+        });
+</script>

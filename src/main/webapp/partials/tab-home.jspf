@@ -1,7 +1,7 @@
 <div class="media">
   <div class="media-left media-top">
     <a href="#">
-      <img class="media-object img-responsive img-thumbnail" style="height: 60%;" src="images/SSOFlow_1.png" alt="Identity Provider initiated Single Sign-On">
+      <img class="media-object img-responsive img-thumbnail" style="height: 80%;" src="images/SSOFlow_1.png" alt="Identity Provider initiated Single Sign-On">
     </a>
   </div>
   <div class="media-body bs-component">
@@ -13,19 +13,44 @@
       of that session without having to re-enter their credentials.The profiles specification for <strong>Security Assertion Markup Language
       2.0 (SAML 2.0)</strong> defines single sign-on based on a web browser.
     </p>
-    <p class="text-justify">
-      This <strong>SSO SAMLv2 Web Application</strong> is a fork of <a href="https://github.com/wso2/product-is/tree/master/modules/samples/sso/sso-agent-sample">Travelocity.COM ServiceProvider / RelyingParty Webapp</a>.
-      This application acts as a Service Provider (<abbr title="Service Provider">SP</abbr>) and Liferay acts as a
-      Identity Provider (<abbr title="Identity Provider">IdP</abbr>).
-      The application uses the <strong><a href="https://github.com/wso2/carbon-identity">WSO2 Carbon Identity framework</a></strong>
-      which simplifies the configuration as SP.<br/>
-    </p>
-    <p class="text-justify">
-      The application is configured as SP through the configuration of the Liferay SAML Portlet.
+    <div class="bs-component bs-callout bs-callout-warning">
+      <p class="text-justify">
+        This <strong>SSO SAMLv2 Web Application</strong> is a fork of <a href="https://github.com/wso2/product-is/tree/master/modules/samples/sso/sso-agent-sample">Travelocity.COM ServiceProvider / RelyingParty Webapp</a>.
+        This application acts as a Service Provider (<abbr title="Service Provider">SP</abbr>) and Liferay acts as a
+        Identity Provider (<abbr title="Identity Provider">IdP</abbr>).
+        The application uses the <strong><a href="https://github.com/wso2/carbon-identity">WSO2 Carbon Identity framework</a></strong>
+        which simplifies the configuration as SP.<br/>
+      </p>
+      <p class="text-justify">
+        The application is configured as SP through the configuration of the Liferay SAML Portlet.
 
+        <ul>
+          <li>IdP entity Id identity.labs.dontesta.it</li>
+          <li>SP entity Id portal.labs.dontesta.it</li>
+        </ul>
+      </p>
+      <div class="alert alert-success" role="alert">
+        For more information on this sample application, see the article on my <a href="http://www.dontesta.it/blog" title="Antonio Musarra's Blog">blog</a>.
+      </div>
+    </div>
+  </div>
+</div>
+<div class="media">
+  <div class="media-body bs-component bs-callout bs-callout-info">
+    <h4 class="media-heading"><strong>SAML 2.0 Bindings</strong></h4>
+    <p class="text-justify">
+      The bindings supported by <strong>SAML 2.0</strong> are outlined in the Bindings specification (SAMLBind)
       <ul>
-        <li>IdP entity Id identity.labs.dontesta.it</li>
-        <li>SP entity Id portal.labs.dontesta.it</li>
+        <li>SAML SOAP Binding (based on SOAP 1.1)</li>
+        <li>Reverse SOAP (PAOS) Binding</li>
+        <li><a href="#redirectbinding" data-toggle="tab-ext" title="Click here to login with SAMLv2 (Redirect binding) from Liferay Identity Provider">HTTP Redirect Binding</a></li>
+        <li><a href="#postbinding" data-toggle="tab-ext" title="Click here to login with (Post Binding) from Liferay Identity Provider">HTTP POST Binding</a></li>
+        <li>HTTP Artifact Binding</li>
+        <li>SAML URI Binding</li>
+      </ul>
+      <p class="text-info">
+        <strong>For Web Browser SSO, the HTTP Redirect Binding and the HTTP POST Binding are commonly used</strong>. For example, the service provider may use HTTP Redirect to send a request while the identity provider uses HTTP POST to transmit the response. This example illustrates that an entity's choice of binding is independent of its partner's choice of binding.
+      </p>
     </p>
   </div>
 </div>

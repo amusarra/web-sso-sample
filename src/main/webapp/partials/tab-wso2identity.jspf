@@ -1,1 +1,35 @@
-<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
+<div class="bs-component">
+  <h4><strong>WSO2 Identity Server (IS)</strong></h4>
+  <p class="text-justify">
+    <a href="http://wso2.com/products/identity-server/" target="_blank">WSO2 Identity Server (IS)</a>
+    provides support to SAML Web-based Single-Sign-On. WSO2 IS supports the Web Browser SSO Profile, Single Logout Profile, and
+    the Basic Attribute Profile from the SAML 2.0 Profile specification.
+    The IS documentation on <a href="http://docs.wso2.org/display/IS460/Managing+Single+Sign-On" target="_blank">SAML2-based Single-Sign-On</a>
+    feature provides detailed instructions on how to setup WSO2 IS as an Identity Provider (IdP), and the configuration
+    that is needed to be done in the Service Provider (SP). Where applicable, all the products of WSO2 middleware comes
+    with in-built functionality as a SP. So, WSO2 products can be configured to use the IS as the IdP in a simple two-step process.
+    The documentation on this can be found <a href="http://docs.wso2.org/display/IS460/Enabling+SSO+for+WSO2+Servers" target="_blank">here</a>.
+    In addition to SAML SSO, IS supports a wide variety of specifications, including OpenID, OpenID Connect, OAuth 2.0, SCIM, XACML,
+    Passive Federation.
+  </p>
+  <p class="text-justify">
+    Following the useful resources:
+  </p>
+  <ul>
+    <li>
+      <a href="https://github.com/wso2/carbon-identity"
+        title="WSO2 Carbon Identity framework"
+        target="_blank">WSO2 Carbon Identity framework</a>
+    </li>
+    <li>
+      <a href="https://docs.wso2.com/display/IS510/SAML+2.0+Web+SSO"
+        title="SAML 2.0 Web SSO"
+        target="_blank">SAML 2.0 Web SSO</a>
+    </li>
+    <li>
+      <a href="https://docs.wso2.com/display/IS510/Configuring+Single+Sign-On"
+        title="Configuring Single Sign-On"
+        target="_blank">Configuring Single Sign-On</a>
+    </li>
+  </ul>
+</div>

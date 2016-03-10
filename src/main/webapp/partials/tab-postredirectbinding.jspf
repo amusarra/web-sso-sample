@@ -1,1 +1,40 @@
-<p class="lead">Click <a href="samlsso?SAML2.HTTPBinding=HTTP-POST">here</a> to login with (Post Binding) from Liferay Identity Provider</p>
+<div class="bs-component">
+  <h4><strong>HTTP POST Binding</strong></h4>
+  <p class="text-justify">
+    Click <a href="samlsso?SAML2.HTTPBinding=HTTP-POST"
+      title="To login with (Post Binding) from Liferay Identity Provider"><span class="label label-primary">here</span></a>
+      to login with (Post Binding) from Liferay Identity Provider</p>
+  <div class="bs-callout bs-callout-info">
+    <p class="text-justify">
+      In the following example, both the service provider and the identity provider use an HTTP POST Binding.
+      Initially, the service provider responds to a request from the user agent with a document containing an XHTML form:
+    </p>
+    <div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>
+    <figure class="highlight">
+      <pre>
+        <code>&lt;form method=&quot;post&quot; action=&quot;http://identity.labs.dontesta.it:8080/c/portal/saml/sso&quot; ...&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;SAMLRequest&quot; value=&quot;&apos;&apos;request&apos;&apos;&quot; /&gt;
+  ... other input parameter....
+&lt;/form&gt;</code>
+      </pre>
+    </figure>
+    <p class="text-justify">
+      The value of the SAMLRequest parameter is the base64-encoding of a <code>&lt;samlp:AuthnRequest&gt;</code>
+      element, which is transmitted to the identity provider via the browser.
+      The SSO service at the identity provider validates the request and responds with a document containing another XHTML form:
+    </p>
+    <div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>
+    <figure class="highlight">
+      <pre>
+        <code>&lt;form method=&quot;post&quot; action=&quot;http://portal.labs.dontesta.it:8080/home.jsp&quot; ...&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;SAMLResponse&quot; value=&quot;&apos;&apos;response&apos;&apos;&quot; /&gt;
+  ...
+&lt;/form&gt;&gt;</code>
+      </pre>
+    </figure>
+    <p class="text-justify">
+      The value of the SAMLResponse parameter is the base64 encoding of a <code>&lt;samlp:Response&gt;</code> element,
+      which likewise is transmitted to the service provider via the browser.
+    </p>
+  </div>
+</div>

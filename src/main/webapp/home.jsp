@@ -42,6 +42,7 @@
       <link rel="stylesheet" href='<%= org.webjars.AssetLocator.getWebJarPath("css/font-awesome.min.css") %>'>
       <!-- Custom styles for this template -->
       <link href="css/bootswatch-bootstrap-united.min.css" rel="stylesheet">
+      <link href="css/docs.min.css" rel="stylesheet">
       <link href="css/custom.min.css" rel="stylesheet">
       <link href="css/sticky-footer-navbar.css" rel="stylesheet">
       <link href="css/app-custom.css" rel="stylesheet">
@@ -188,7 +189,7 @@
          </div>
       </div>
    </div>
-   <footer class="footer">
+   <footer class="bs-docs-footer">
      <%@ include file="partials/common-footer.jspf" %>
    </footer>
    <%@ include file="partials/common-bottom-js.jspf" %>
