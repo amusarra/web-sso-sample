@@ -23,7 +23,6 @@
       </p>
       <p class="text-justify">
         The application is configured as SP through the configuration of the Liferay SAML Portlet.
-
         <ul>
           <li>IdP entity Id identity.labs.dontesta.it</li>
           <li>SP entity Id portal.labs.dontesta.it</li>
