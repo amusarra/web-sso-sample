@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" validUntil="2016-02-28T11:53:35Z" cacheDuration="PT1457092415S" entityID="portal.labs.dontesta.it" ID="pfxa0b41479-cb7a-c54e-2b9f-c866f4d58936"><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+  <ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+    <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+  <ds:Reference URI="#pfxa0b41479-cb7a-c54e-2b9f-c866f4d58936"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>//GeqxHlAsPBBNKwq4p8c0Brnw0=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>C0jWgFlOhCF/sJ9dg5Z3txE+CuiveueY5z3+2Rhi50Zzl44A/M8IIk9+24jkvjkFolJEdagqDJ4L2ta2uYnERe+3mabqltiICn7JPAdnen/FQm5A2UTZJq/tR2wR12Jy6gAXxh7WmkiAXNFjDlVE51rYFLdBdd2ZhncUHCFJJSzC0hCmFVbecJtS5hGuDx8dF0qo8oMZvFiQE/Izdp3/TlgXCCVugqbaRcqVqq7565vH0jF0dZK7ld0SGQwOFqWBAMYrNirLoDE75n0iHlVLeetYxpKeLp3O0aKxrCrx95eh1WMFjYsERlzj5TdYtYtZpULZsP/KgMtGr50OfJKmduo=</ds:SignatureValue>
+<ds:KeyInfo><ds:X509Data><ds:X509Certificate>MIIEOTCCAyCgAwIBAgIBADANBgkqhkiG9w0BAQ0FADCBtTELMAkGA1UEBhMCaXQxCzAJBgNVBAgMAlJNMR8wHQYDVQQKDBZBbnRvbmlvIE11c2FycmEncyBCbG9nMSAwHgYDVQQDDBdwb3J0YWwubGFicy5kb250ZXN0YS5pdDEPMA0GA1UEBwwGTWFyaW5vMRswGQYDVQQLDBJTaGlydXMgTGFicyBQb3J0YWwxKDAmBgkqhkiG9w0BCQEWGWFudG9uaW8ubXVzYXJyYUBnbWFpbC5jb20wHhcNMTYwMjI2MTEzODU3WhcNMTcwMjI1MTEzODU3WjCBtTELMAkGA1UEBhMCaXQxCzAJBgNVBAgMAlJNMR8wHQYDVQQKDBZBbnRvbmlvIE11c2FycmEncyBCbG9nMSAwHgYDVQQDDBdwb3J0YWwubGFicy5kb250ZXN0YS5pdDEPMA0GA1UEBwwGTWFyaW5vMRswGQYDVQQLDBJTaGlydXMgTGFicyBQb3J0YWwxKDAmBgkqhkiG9w0BCQEWGWFudG9uaW8ubXVzYXJyYUBnbWFpbC5jb20wggEjMA0GCSqGSIb3DQEBAQUAA4IBEAAwggELAoIBAgDAU/2723LoZOF1cQXLfMwpVav9UwcacBT0cB4g/VUslYIpGP7T32hBKx+SPXRfdgdrEoX7BAURD4WG3jupXmX+5j8GVdLVnpStniHA0OOrdVtOuceQDiUwj3QQJBXm5NYztTY5Nj2juWQ21JB37qP0YTpohpBRaW2g+TvefGRZshoV9Ly+oi/e+HKidfVSl8MAl78qyVZLhtesxuf1wkS0uxzPjRnyIbGA3uT7vWwOpys1TpuaPmrd/TLncx2ZDmkbzNOC5QDeP1fbEnCreLCqtxCGnalR9ysRrs+wz6aNOZVn/XfmHaO8ut0TPqLgN9oalJVFKJXYXJKOwnVMa09GvQIDAQABo1AwTjAdBgNVHQ4EFgQUaa1Nb8azDyD1Z7kl21qyn2SKJgkwHwYDVR0jBBgwFoAUaa1Nb8azDyD1Z7kl21qyn2SKJgkwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQ0FAAOCAQIADb9H/yGsV4cRo5aFKMbLyukaqw68709YEFCZLNgTJqsZlgRaIdMj0qi2Sy0pGk1zsnRzixXksiMsgnb5ryqW2ICTTTC8YecEAp2ZMj99oIOnpkN+bOYksxhiJUigxkkp9pnAmqmcrlG/2N1lRJOThn93+pQDORXaI1eaP82609CszO8pAU+BwRMgba55wUPO3v4Ych8G4V095UH+fP7QIee9QUtkPfkndy103aTQgOZuzOjDDtp1xOkz0jTtS9CPruYi/1rwwHlHMgSFM3kQsW3n9Mv9Nio9pQUm7DCb2EiB9urgkaIYN2MsVMiqg4PM1R8CchAt5sxSuasYvz7/jkQ=</ds:X509Certificate></ds:X509Data></ds:KeyInfo></ds:Signature>
+  <md:SPSSODescriptor AuthnRequestsSigned="true" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>MIIEOTCCAyCgAwIBAgIBADANBgkqhkiG9w0BAQ0FADCBtTELMAkGA1UEBhMCaXQxCzAJBgNVBAgMAlJNMR8wHQYDVQQKDBZBbnRvbmlvIE11c2FycmEncyBCbG9nMSAwHgYDVQQDDBdwb3J0YWwubGFicy5kb250ZXN0YS5pdDEPMA0GA1UEBwwGTWFyaW5vMRswGQYDVQQLDBJTaGlydXMgTGFicyBQb3J0YWwxKDAmBgkqhkiG9w0BCQEWGWFudG9uaW8ubXVzYXJyYUBnbWFpbC5jb20wHhcNMTYwMjI2MTEzODU3WhcNMTcwMjI1MTEzODU3WjCBtTELMAkGA1UEBhMCaXQxCzAJBgNVBAgMAlJNMR8wHQYDVQQKDBZBbnRvbmlvIE11c2FycmEncyBCbG9nMSAwHgYDVQQDDBdwb3J0YWwubGFicy5kb250ZXN0YS5pdDEPMA0GA1UEBwwGTWFyaW5vMRswGQYDVQQLDBJTaGlydXMgTGFicyBQb3J0YWwxKDAmBgkqhkiG9w0BCQEWGWFudG9uaW8ubXVzYXJyYUBnbWFpbC5jb20wggEjMA0GCSqGSIb3DQEBAQUAA4IBEAAwggELAoIBAgDAU/2723LoZOF1cQXLfMwpVav9UwcacBT0cB4g/VUslYIpGP7T32hBKx+SPXRfdgdrEoX7BAURD4WG3jupXmX+5j8GVdLVnpStniHA0OOrdVtOuceQDiUwj3QQJBXm5NYztTY5Nj2juWQ21JB37qP0YTpohpBRaW2g+TvefGRZshoV9Ly+oi/e+HKidfVSl8MAl78qyVZLhtesxuf1wkS0uxzPjRnyIbGA3uT7vWwOpys1TpuaPmrd/TLncx2ZDmkbzNOC5QDeP1fbEnCreLCqtxCGnalR9ysRrs+wz6aNOZVn/XfmHaO8ut0TPqLgN9oalJVFKJXYXJKOwnVMa09GvQIDAQABo1AwTjAdBgNVHQ4EFgQUaa1Nb8azDyD1Z7kl21qyn2SKJgkwHwYDVR0jBBgwFoAUaa1Nb8azDyD1Z7kl21qyn2SKJgkwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQ0FAAOCAQIADb9H/yGsV4cRo5aFKMbLyukaqw68709YEFCZLNgTJqsZlgRaIdMj0qi2Sy0pGk1zsnRzixXksiMsgnb5ryqW2ICTTTC8YecEAp2ZMj99oIOnpkN+bOYksxhiJUigxkkp9pnAmqmcrlG/2N1lRJOThn93+pQDORXaI1eaP82609CszO8pAU+BwRMgba55wUPO3v4Ych8G4V095UH+fP7QIee9QUtkPfkndy103aTQgOZuzOjDDtp1xOkz0jTtS9CPruYi/1rwwHlHMgSFM3kQsW3n9Mv9Nio9pQUm7DCb2EiB9urgkaIYN2MsVMiqg4PM1R8CchAt5sxSuasYvz7/jkQ=</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:KeyDescriptor use="encryption">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>MIIEOTCCAyCgAwIBAgIBADANBgkqhkiG9w0BAQ0FADCBtTELMAkGA1UEBhMCaXQxCzAJBgNVBAgMAlJNMR8wHQYDVQQKDBZBbnRvbmlvIE11c2FycmEncyBCbG9nMSAwHgYDVQQDDBdwb3J0YWwubGFicy5kb250ZXN0YS5pdDEPMA0GA1UEBwwGTWFyaW5vMRswGQYDVQQLDBJTaGlydXMgTGFicyBQb3J0YWwxKDAmBgkqhkiG9w0BCQEWGWFudG9uaW8ubXVzYXJyYUBnbWFpbC5jb20wHhcNMTYwMjI2MTEzODU3WhcNMTcwMjI1MTEzODU3WjCBtTELMAkGA1UEBhMCaXQxCzAJBgNVBAgMAlJNMR8wHQYDVQQKDBZBbnRvbmlvIE11c2FycmEncyBCbG9nMSAwHgYDVQQDDBdwb3J0YWwubGFicy5kb250ZXN0YS5pdDEPMA0GA1UEBwwGTWFyaW5vMRswGQYDVQQLDBJTaGlydXMgTGFicyBQb3J0YWwxKDAmBgkqhkiG9w0BCQEWGWFudG9uaW8ubXVzYXJyYUBnbWFpbC5jb20wggEjMA0GCSqGSIb3DQEBAQUAA4IBEAAwggELAoIBAgDAU/2723LoZOF1cQXLfMwpVav9UwcacBT0cB4g/VUslYIpGP7T32hBKx+SPXRfdgdrEoX7BAURD4WG3jupXmX+5j8GVdLVnpStniHA0OOrdVtOuceQDiUwj3QQJBXm5NYztTY5Nj2juWQ21JB37qP0YTpohpBRaW2g+TvefGRZshoV9Ly+oi/e+HKidfVSl8MAl78qyVZLhtesxuf1wkS0uxzPjRnyIbGA3uT7vWwOpys1TpuaPmrd/TLncx2ZDmkbzNOC5QDeP1fbEnCreLCqtxCGnalR9ysRrs+wz6aNOZVn/XfmHaO8ut0TPqLgN9oalJVFKJXYXJKOwnVMa09GvQIDAQABo1AwTjAdBgNVHQ4EFgQUaa1Nb8azDyD1Z7kl21qyn2SKJgkwHwYDVR0jBBgwFoAUaa1Nb8azDyD1Z7kl21qyn2SKJgkwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQ0FAAOCAQIADb9H/yGsV4cRo5aFKMbLyukaqw68709YEFCZLNgTJqsZlgRaIdMj0qi2Sy0pGk1zsnRzixXksiMsgnb5ryqW2ICTTTC8YecEAp2ZMj99oIOnpkN+bOYksxhiJUigxkkp9pnAmqmcrlG/2N1lRJOThn93+pQDORXaI1eaP82609CszO8pAU+BwRMgba55wUPO3v4Ych8G4V095UH+fP7QIee9QUtkPfkndy103aTQgOZuzOjDDtp1xOkz0jTtS9CPruYi/1rwwHlHMgSFM3kQsW3n9Mv9Nio9pQUm7DCb2EiB9urgkaIYN2MsVMiqg4PM1R8CchAt5sxSuasYvz7/jkQ=</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="${saml.sp.slo.url}"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="${saml.assertion-consumer-url}" index="1"/>
+  </md:SPSSODescriptor>
+  <md:Organization>
+    <md:OrganizationName xml:lang="en-US">Antonio Musarra's Blog</md:OrganizationName>
+    <md:OrganizationDisplayName xml:lang="en-US">Antonio Musarra's Blog Portal</md:OrganizationDisplayName>
+    <md:OrganizationURL xml:lang="en-US">http://www.dontesta.it</md:OrganizationURL>
+  </md:Organization>
+  <md:ContactPerson contactType="technical">
+    <md:GivenName>Antonio Musarra</md:GivenName>
+    <md:EmailAddress>antonio.musarra@gmail.com</md:EmailAddress>
+  </md:ContactPerson>
+  <md:ContactPerson contactType="support">
+    <md:GivenName>Antonio Musarra</md:GivenName>
+    <md:EmailAddress>antonio.musarra@gmail.com</md:EmailAddress>
+  </md:ContactPerson>
+</md:EntityDescriptor>

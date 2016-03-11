@@ -122,8 +122,8 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Active Projects <b class="caret"></b></a>
                   <ul class="dropdown-menu">
                      <li class="dropdown-header">Web Services</li>
-                     <li><a href="example-cxf-rs-services-1.0-SNAPSHOT/">Simple CXF JAX-RS WebApp Service</a></li>
-                     <li><a href="HTMLSugarCRMRESTApplication.html">SugarCRM REST API application</a></li>
+                     <li><a href="/example-cxf-rs-services-1.0-SNAPSHOT/">Simple CXF JAX-RS WebApp Service</a></li>
+                     <li><a href="/HTMLSugarCRMRESTApplication.html">SugarCRM REST API application</a></li>
                   </ul>
                </li>
             </ul>

@@ -102,14 +102,6 @@ public class WebSSOAgentFilter extends SSOAgentFilter {
         SSOAgentRequestResolver resolver =
                             new SSOAgentRequestResolver(request, response, config);
 
-        _log.debug("ssoAgentConfig.getSAML2().isSLOEnabled() => " + config.getSAML2().isSLOEnabled());
-        _log.debug("soAgentConfig.isSAML2SSOLoginEnabled() => " + config.isSAML2SSOLoginEnabled());
-        _log.debug("ssoAgentConfig.getSAML2().getSLOURL() => " + config.getSAML2().getSLOURL());
-
-        _log.debug("resolver.isURLToSkip() => " + resolver.isURLToSkip());
-        _log.debug("request.getRequestURI().endsWith(config.getSAML2().getSLOURL()) => " + request.getRequestURI().endsWith(config.getSAML2().getSLOURL()));
-        _log.debug("resolver.isSLOURL() => " + resolver.isSLOURL());
-
         if (StringUtils.isNotEmpty(servletRequest.getParameter(USERNAME)) &&
                 StringUtils.isNotEmpty(servletRequest.getParameter(PASSWORD))) {
 
@@ -133,12 +125,10 @@ public class WebSSOAgentFilter extends SSOAgentFilter {
                     "</body>\n" +
                     "</html>";
             config.getSAML2().setPostBindingRequestHTMLPayload(htmlPayload);
-        } else if (request.getRequestURI().endsWith("/logout")) {
+        } else if (request.getRequestURI().endsWith("/logout") || request.getRequestURI().endsWith("/slo")) {
                 _log.debug("request.getRequestURI() => " + request.getRequestURI());
                 SAML2SSOManager samlSSOManager = new SAML2SSOManager(config);
                 config.getSAML2().setIdPURL(config.getSAML2().getSLOURL());
-
-                _log.debug("config.getSAML2().getIdPURL() => " + config.getSAML2().getIdPURL());
 
                 if (resolver.isHttpPostBinding()) {
                     config.getSAML2().setPassiveAuthn(false);
@@ -159,6 +149,5 @@ public class WebSSOAgentFilter extends SSOAgentFilter {
 
     @Override
     public void destroy() {
-
     }
 }

@@ -33,6 +33,44 @@
     <commons-collections.version>3.2.2</commons-collections.version>
     <compilation.debug>true</compilation.debug>
   </properties>
+
+  <profiles>
+    <profile>
+      <id>dev</id>
+      <activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+      <properties>
+        <saml.idp.entity.id>identity.labs.dontesta.it</saml.idp.entity.id>
+        <saml.sp.entity.id>portal.labs.dontesta.it</saml.sp.entity.id>
+        <saml.assertion-consumer-url>http://portal.labs.dontesta.it:8080/web-sso-sample-app/samlsso</saml.assertion-consumer-url>
+        <saml.idp.url>http://identity.labs.dontesta.it:8080/c/portal/saml/sso</saml.idp.url>
+        <saml.slo.url>http://identity.labs.dontesta.it:8080/c/portal/saml/slo</saml.slo.url>
+        <saml.sp.slo.url>http://portal.labs.dontesta.it:8080/web-sso-sample-app/logout</saml.sp.slo.url>
+        <keystore.password>wso2carbon</keystore.password>
+        <keystore.idp.public.cert-alias>liferayidp</keystore.idp.public.cert-alias>
+        <keystore.sp.private.key-alias>portalelabsdontestait</keystore.sp.private.key-alias>
+        <keystore.sp.private.key-password>amusarra</keystore.sp.private.key-password>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>test</id>
+      <properties>
+        <saml.idp.entity.id>identity.labs.dontesta.it</saml.idp.entity.id>
+        <saml.sp.entity.id>portal.labs.dontesta.it</saml.sp.entity.id>
+        <saml.assertion-consumer-url>http://jbossews-shiruslabs.rhcloud.com/web-sso-sample-app/samlsso</saml.assertion-consumer-url>
+        <saml.idp.url>http://identity.labs.dontesta.it:8080/c/portal/saml/sso</saml.idp.url>
+        <saml.slo.url>http://identity.labs.dontesta.it:8080/c/portal/saml/slo</saml.slo.url>
+        <saml.sp.slo.url>http://jbossews-shiruslabs.rhcloud.com/web-sso-sample-app/logout</saml.sp.slo.url>
+        <keystore.password>wso2carbon</keystore.password>
+        <keystore.idp.public.cert-alias>liferayidp</keystore.idp.public.cert-alias>
+        <keystore.sp.private.key-alias>portalelabsdontestait</keystore.sp.private.key-alias>
+        <keystore.sp.private.key-password>amusarra</keystore.sp.private.key-password>
+      </properties>
+    </profile>
+
+  </profiles>
   <developers>
     <developer>
       <id>amusarra</id>
@@ -179,14 +217,24 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>web-sso-sample-app</finalName>
+    <finalName>${project.artifactId}</finalName>
     <resources>
       <resource>
-        <directory>src/main/webapp</directory>
-        <targetPath>META-INF/resources</targetPath>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+        <includes>
+          <include>**/*.jks</include>
+          <include>**/*.cer</include>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+        </includes>
       </resource>
       <resource>
-        <directory>src/main/resources</directory>
+        <directory>${project.build.directory}/classes</directory>
+        <targetPath>${project.build.directory}/${project.artifactId}/sso</targetPath>
+        <includes>
+          <include>**/portal_labs_dontesta_it_saml_sp_metadata.xml</include>
+        </includes>
       </resource>
     </resources>
     <plugins>
@@ -204,6 +252,16 @@
             </manifest>
           </archive>
         </configuration>
+      </plugin>
+      <plugin>
+      	<artifactId>maven-resources-plugin</artifactId>
+      	<version>2.5</version>
+      	<configuration>
+      		<nonFilteredFileExtensions>
+      		<nonFilteredFileExtension>jks</nonFilteredFileExtension>
+      		<nonFilteredFileExtension>cer</nonFilteredFileExtension>
+      		</nonFilteredFileExtensions>
+      	</configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.tomcat.maven</groupId>

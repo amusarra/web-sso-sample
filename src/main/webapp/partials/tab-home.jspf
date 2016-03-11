@@ -25,7 +25,7 @@
         The application is configured as SP through the configuration of the Liferay SAML Portlet.
         <ul>
           <li>IdP entity Id identity.labs.dontesta.it</li>
-          <li>SP entity Id portal.labs.dontesta.it</li>
+          <li>SP entity Id portal.labs.dontesta.it. Click <a href="sso/metadata" target="_blank">here</a> for <span class="label label-primary">SP SAML metadata</span></li>
         </ul>
       </p>
       <div class="alert alert-success" role="alert">

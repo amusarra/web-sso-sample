@@ -5,7 +5,7 @@
          <div class="form-group has-feedback">
             <label for="inputEmail" class="col-lg-2 control-label">Email</label>
             <div class="col-lg-10">
-               <input type="email" class="form-control" id="username" placeholder="Email" autocomplete="off" aria-describedby="inputSuccessEmailStatus" required>
+               <input type="email" class="form-control" name="username" id="username" placeholder="Email" autocomplete="off" aria-describedby="inputSuccessEmailStatus" required>
                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                <span id="inputSuccessEmailStatus" class="sr-only">(success)</span>
                <div class="help-block with-errors"></div>
@@ -14,7 +14,7 @@
          <div class="form-group has-feedback">
             <label for="inputPassword" class="col-lg-2 control-label">Password</label>
             <div class="col-lg-10">
-               <input type="password"  class="form-control" id="password" data-minlength="4" placeholder="Password" autocomplete="off" aria-describedby="inputSuccessPasswordStatus" required>
+               <input type="password" class="form-control" name="password" id="password" data-minlength="4" placeholder="Password" autocomplete="off" aria-describedby="inputSuccessPasswordStatus" required>
                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                <span id="inputSuccessPasswordStatus" class="sr-only">(success)</span>
                <div class="help-block with-errors"></div>

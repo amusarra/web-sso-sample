@@ -39,9 +39,9 @@ import java.io.IOException;
     name = "ForwardingServlet",
     description = "Web SSO forwarding servlet",
     loadOnStartup = 1,
-    urlPatterns = {"/samlsso", "/logout", "/slo"},
+    urlPatterns = {"/samlsso", "/logout", "/slo","/sso/metadata"},
     initParams = {
-                @WebInitParam(name = "user", value = "test@liferay.com"),
+                @WebInitParam(name = "username", value = "test@liferay.com"),
                 @WebInitParam(name = "password", value = "test")
         }
 )
@@ -55,6 +55,8 @@ public class ForwardingServlet extends HttpServlet {
             request.getRequestDispatcher("home.jsp").forward(request,response);
         } else if (request.getRequestURI().endsWith("/logout") || request.getRequestURI().endsWith("/slo")){
             request.getRequestDispatcher("index.jsp").forward(request,response);
+        } else if (request.getRequestURI().endsWith("/sso/metadata")) {
+            request.getRequestDispatcher("portal_labs_dontesta_it_saml_sp_metadata.xml").forward(request,response);
         }
     }
 

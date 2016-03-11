@@ -14,8 +14,8 @@
     </encoder>
   </appender>
   <logger name="it.dontesta.labs.sso.web" level="DEBUG"/>
-  <logger name="org.wso2.carbon.identity" level="INFO"/>
-  <root level="INFO">
+  <logger name="org.wso2.carbon.identity" level="DEBUG"/>
+  <root level="DEBUG">
     <appender-ref ref="A1"/>
   </root>
 </configuration>
