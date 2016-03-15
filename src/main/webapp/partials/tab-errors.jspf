@@ -1,3 +1,31 @@
-<%=exception.getMessage()%>
+<h4>Errors occurred</h4>
+<p class="text-justify">
+	<strong>Error message</strong>: <%=exception.getMessage()%>
+</p>
+<div class="row container">
+	<div class="col-*-12">
+		<p class="text-right"><a href="index.jsp">Go to Login page</a></p>
+	</div>
+</div>
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <h3 class="panel-title">Error StackTrace</h3>
+  </div>
+  <div class="panel-body">
+    <div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>
+    <figure class="highlight">
+      <pre>
+     	 <code>
+		    <%exception.printStackTrace(new java.io.PrintWriter(out));%>
+	    </code>
+      </pre>
+    </figure>
+  </div>
+</div>
 <hr>
-<a href="index.jsp"> Go to Login page </a>
+<div class="row container">
+	<div class="col-*-12">
+		<p class="text-right"><a href="index.jsp">Go to Login page</a></p>
+	</div>
+</div>
+

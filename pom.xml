@@ -45,8 +45,8 @@
         <saml.sp.entity.id>portal.labs.dontesta.it</saml.sp.entity.id>
         <saml.assertion-consumer-url>http://portal.labs.dontesta.it:8080/web-sso-sample-app/samlsso</saml.assertion-consumer-url>
         <saml.idp.url>http://identity.labs.dontesta.it:8080/c/portal/saml/sso</saml.idp.url>
-        <saml.slo.url>http://identity.labs.dontesta.it:8080/c/portal/saml/slo</saml.slo.url>
-        <saml.sp.slo.url>http://portal.labs.dontesta.it:8080/web-sso-sample-app/logout</saml.sp.slo.url>
+        <saml.idp.slo.url>http://identity.labs.dontesta.it:8080/c/portal/saml/slo</saml.idp.slo.url>
+        <saml.sp.slo.url>/web-sso-sample-app/logout</saml.sp.slo.url>
         <keystore.password>wso2carbon</keystore.password>
         <keystore.idp.public.cert-alias>liferayidp</keystore.idp.public.cert-alias>
         <keystore.sp.private.key-alias>portalelabsdontestait</keystore.sp.private.key-alias>
@@ -61,7 +61,7 @@
         <saml.sp.entity.id>portal.labs.dontesta.it</saml.sp.entity.id>
         <saml.assertion-consumer-url>http://jbossews-shiruslabs.rhcloud.com/web-sso-sample-app/samlsso</saml.assertion-consumer-url>
         <saml.idp.url>http://identity.labs.dontesta.it:8080/c/portal/saml/sso</saml.idp.url>
-        <saml.slo.url>http://identity.labs.dontesta.it:8080/c/portal/saml/slo</saml.slo.url>
+        <saml.idp.slo.url>http://identity.labs.dontesta.it:8080/c/portal/saml/slo</saml.idp.slo.url>
         <saml.sp.slo.url>http://jbossews-shiruslabs.rhcloud.com/web-sso-sample-app/logout</saml.sp.slo.url>
         <keystore.password>wso2carbon</keystore.password>
         <keystore.idp.public.cert-alias>liferayidp</keystore.idp.public.cert-alias>
