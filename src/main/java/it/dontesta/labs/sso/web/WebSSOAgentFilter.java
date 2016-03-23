@@ -43,7 +43,7 @@ import org.wso2.carbon.identity.sso.agent.SSOAgentRequestResolver;
 import org.wso2.carbon.identity.sso.agent.bean.SSOAgentConfig;
 
 @WebFilter(filterName = "WebSSOAgentFilter", urlPatterns = { "/samlsso",
-		"/logout", "/slo", "*.jsp" })
+		"/logout", "/slo", "*.jsp", "*.jspf" })
 public class WebSSOAgentFilter extends SSOAgentFilter {
 
 	private static Logger _log = LoggerFactory
@@ -106,25 +106,45 @@ public class WebSSOAgentFilter extends SSOAgentFilter {
 
 		// Reset previously sent HTML payload
 		ssoAgentConfig.getSAML2().setPostBindingRequestHTMLPayload(null);
-		ssoAgentConfig.getSAML2().getSLOURL();
-		
-		if (request.getRequestURI().endsWith("/logout") && resolver.isSLOURL()) {
-			ssoAgentConfig
-			.getSAML2()
-			.setIdPURL(
-					properties
-							.getProperty("SAML2.IdPSLOURL"));
-			String saml2SSOResponse = request.getParameter(SSOAgentConstants.SAML2SSO.HTTP_POST_PARAM_SAML2_RESP);
-			_log.debug(SSOAgentConstants.SAML2SSO.HTTP_POST_PARAM_SAML2_RESP + "=> " + saml2SSOResponse);
-			if(saml2SSOResponse != null && !saml2SSOResponse.isEmpty()) {
-				String decodedResponse = new String(Base64.decode(saml2SSOResponse), Charset.forName("UTF-8"));
-				_log.debug("Decoded " 
-						+ SSOAgentConstants.SAML2SSO.HTTP_POST_PARAM_SAML2_RESP 
-						+ "=> " 
-						+ decodedResponse);
+
+		if (_log.isDebugEnabled()) {
+			String saml2SSOResponse = request
+					.getParameter(SSOAgentConstants.SAML2SSO.HTTP_POST_PARAM_SAML2_RESP);
+			String saml2SSORequest = request
+					.getParameter(SSOAgentConstants.SAML2SSO.HTTP_POST_PARAM_SAML2_AUTH_REQ);
+
+			if (saml2SSOResponse != null && !saml2SSOResponse.isEmpty()) {
+				_log.debug(SSOAgentConstants.SAML2SSO.HTTP_POST_PARAM_SAML2_RESP
+						+ "=> " + saml2SSOResponse);
+
+				String decodedResponse = new String(
+						Base64.decode(saml2SSOResponse),
+						Charset.forName("UTF-8"));
+
+				_log.debug("Decoded "
+						+ SSOAgentConstants.SAML2SSO.HTTP_POST_PARAM_SAML2_RESP
+						+ "=> " + decodedResponse);
 			}
+
+			if (saml2SSORequest != null && !saml2SSORequest.isEmpty()) {
+				_log.debug(SSOAgentConstants.SAML2SSO.HTTP_POST_PARAM_SAML2_AUTH_REQ
+						+ "=> " + saml2SSORequest);
+
+				String decodedResponse = new String(
+						Base64.decode(saml2SSORequest),
+						Charset.forName("UTF-8"));
+
+				_log.debug("Decoded "
+						+ SSOAgentConstants.SAML2SSO.HTTP_POST_PARAM_SAML2_AUTH_REQ
+						+ "=> " + decodedResponse);
+			}
+
 		}
 
+		if (request.getRequestURI().endsWith("/logout") && resolver.isSLOURL()) {
+			ssoAgentConfig.getSAML2().setIdPURL(
+					properties.getProperty("SAML2.IdPSLOURL"));
+		}
 
 		servletRequest.setAttribute(SSOAgentConstants.CONFIG_BEAN_NAME,
 				ssoAgentConfig);

@@ -19,9 +19,11 @@
         </ds:X509Data>
       </ds:KeyInfo>
     </md:KeyDescriptor>
-    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="${saml.sp.slo.url}"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="${saml.sp.slo.url}"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="${saml.sp.slo.url}" index="1"/>
     <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
-    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="${saml.assertion-consumer-url}" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="${saml.assertion-consumer-url}"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="${saml.assertion-consumer-url}" index="1"/>
   </md:SPSSODescriptor>
   <md:Organization>
     <md:OrganizationName xml:lang="en-US">Antonio Musarra's Blog</md:OrganizationName>

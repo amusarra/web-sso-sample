@@ -8,14 +8,18 @@
 <!--    http://www.qos.ch/shop/products/professionalSupport         -->
 <!--                                                                -->
 <configuration>
-  <appender name="A1" class="ch.qos.logback.core.ConsoleAppender">
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
     <encoder>
       <pattern>%d [%t] %-5p %c - %m%n</pattern>
     </encoder>
   </appender>
-  <logger name="it.dontesta.labs.sso.web" level="DEBUG"/>
-  <logger name="org.wso2.carbon.identity" level="DEBUG"/>
+  <logger name="it.dontesta.labs.sso.web" level="DEBUG">
+  	<appender-ref ref="STDOUT" />
+  </logger>
+  <logger name="org.wso2.carbon.identity" level="DEBUG">
+  	<appender-ref ref="STDOUT" />
+  </logger>
   <root level="DEBUG">
-    <appender-ref ref="A1"/>
+    <appender-ref ref="STDOUT"/>
   </root>
 </configuration>
